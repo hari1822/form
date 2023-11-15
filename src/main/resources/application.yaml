@@ -1,0 +1,39 @@
+spring:
+  datasource: 
+     url: jdbc:mysql://localhost:3306/test?useSSL=false
+     username: root
+     password: hari1822
+  mvc:
+     cors:
+        Access-Control-Allow-Origin: "*"
+
+     
+  jpa:
+     hibernate:
+        ddl-auto: update
+        
+  servlet:
+     multipart:
+        max-file-size: 10MB
+        
+  files: 
+     location: /home/assistanz/test2/
+     allowed-types: jpg, jpeg, png
+  
+  output:
+     ansi:
+        enabled: ALWAYS
+  
+logging:
+  level: 
+     root: INFO
+  file:
+     name: application-debug.log
+     path: /home/assistanz/Downloads/form
+     
+  pattern: 
+     console: "%d{dd:MM:yyyy HH:mm:ss} %clr(%-5level ${PID}) --- [%15.15t]  %clr(%-40.40c{1.}  : %msg%n)"
+     file: "%d{dd:MM:yyyy HH:mm:ss} %-5level ${PID} --- [%15.15t]  %-40.40c{1.}  : %msg%n"  
+
+
+     
